@@ -10,8 +10,9 @@ class Point:
         self.x = x
         self.y = y
 
-    def set_bound(self, left):
-        self.MIN_COORD = left
+    @classmethod
+    def set_bound(cls, left):
+        cls.MIN_COORD = left
 
 
 
@@ -22,3 +23,4 @@ if __name__ == '__main__':
     pt1.set_bound(-100)
     print(pt1.__dict__)
     print(pt2.__dict__)
+    print(Point.__dict__)
